@@ -138,12 +138,15 @@ function insertaTablaMulti(numero) {
 function pulsado1(){
     let a=[];
     let b=[];
-    for(i=0;i<=4;i++){
-
-        a[i]=document.getElementsByTagName("td")[i].innerHTML;
-        b=b+a[i];
-    }
-    alert(b);
+    var d=this.innerHTML;
+ 
+    let d1 = d.substring(4, 5);
+    let d2 = d.substring(14, 15);
+    let d3 = d.substring(24, 25);
+    let d4 = d.substring(34, 35);
+    let d5 = d.substring(44, 46);
+    var B=d1 + d2 + d3 + d4 +d5;
+    alert(B);
 }
 
 
