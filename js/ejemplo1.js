@@ -136,13 +136,14 @@ function insertaTablaMulti(numero) {
 }
 
 function pulsado1(){
-    let a=[, , , ,];
-
+    let a=[];
+    let b=[];
     for(i=0;i<=4;i++){
 
         a[i]=document.getElementsByTagName("td")[i].innerHTML;
+        b=b+a[i];
     }
-    alert(a);
+    alert(b);
 }
 
 
