@@ -59,3 +59,10 @@ window.onload=function(){
     boton.onclick=mostrarTabla;
 
 }
+
+function ClonarDiv() { 
+    var a=document.getElementsByTagName("div")[1];
+    a.parentElement.appendChild(a.cloneNode(true));
+    a.children[0].setAttribute("id",a.children[0].getAttribute("id")+1);
+    a.children[1].setAttribute("id",a.children[1].getAttribute("id")+1);
+ }
