@@ -63,6 +63,10 @@ window.onload=function(){
 function ClonarDiv() { 
     var a=document.getElementsByTagName("div")[1];
     a.parentElement.appendChild(a.cloneNode(true));
-    a.children[0].setAttribute("id",a.children[0].getAttribute("id")+1);
-    a.children[1].setAttribute("id",a.children[1].getAttribute("id")+1);
+    for(let i=0;i<=2;i++){
+        a.children[i].setAttribute("id",a.children[i].getAttribute("id")+i);
+    }
+    var padre=a.parentNode;
+    var divEnlace=document.getElementById("enlace");
+    padre.appendChild(a,divEnlace);
  }
