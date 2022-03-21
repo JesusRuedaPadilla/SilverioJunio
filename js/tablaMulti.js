@@ -52,3 +52,10 @@ function mostrarTabla (){
 
     }
 }
+
+window.onload=function(){
+    var boton=document.getElementById("boton");
+
+    boton.onclick=mostrarTabla;
+
+}
