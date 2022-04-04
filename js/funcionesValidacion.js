@@ -14,3 +14,16 @@ function esDNI(cadena){
 
     return respuesta;
 }
+
+function esEdad(cadena){
+    var respuesta=false;
+    var expEdad=(/^[0-9]{1,2}$/);
+    
+    var partes2=expEdad.exec(cadena);
+
+   if(partes2){
+        respuesta=true;
+   }
+
+    return respuesta;
+}
