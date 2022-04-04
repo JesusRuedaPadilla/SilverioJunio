@@ -1,14 +1,22 @@
-function cargarMensajes(){
-    var ajax=new XMLHttpRequest();
-    ajax.onreadystatechange=function(){
-        if(ajax.readyState==4 && ajax.status==200){
-            document.getElementById("mensaje").innerHTML=ajax.responseText;
-        }
-    }
-    ajax.open("GET","fichero.txt");
-    ajax.send();
-}
 
+// function cargarMensajes(){
+//     var ajax=new XMLHttpRequest();
+//     ajax.onreadystatechange=function(){
+//         if(ajax.readyState==4 && ajax.status==200){
+//             document.getElementById("mensaje").innerHTML=ajax.responseText;
+//         }
+//     }
+//     ajax.open("GET","fichero.txt");
+//     ajax.send();
+// }
+
+function cargarMensajes(){
+
+  fetch("fichero.txt")
+    .then(x=>x.text())
+    .then(y=>document.getElementById("mensaje").innerHTML=y)
+
+}
 
 function cargarHora(){
     var ajax=new XMLHttpRequest();
