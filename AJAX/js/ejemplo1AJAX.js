@@ -31,24 +31,40 @@ function cargarHora(){
 
 
 
-function cargarAlumnos(){
-    var ajax=new XMLHttpRequest();
-    ajax.onreadystatechange=function(){
-        if(ajax.readyState==4 && ajax.status==200){
-            var vector=JSON.parse(ajax.responseText);
-            vector=vector.sort();
-            var listado= document.getElementById("listado");
-            listado.innerHTML="";
+// function cargarAlumnos(){
+//     var ajax=new XMLHttpRequest();
+//     ajax.onreadystatechange=function(){
+//         if(ajax.readyState==4 && ajax.status==200){
+//             var vector=JSON.parse(ajax.responseText);
+//             vector=vector.sort();
+//             var listado= document.getElementById("listado");
+//             listado.innerHTML="";
 
-            for(let i=0;i<vector.length;i++){
-                var li=document.createElement("li");
-                li.innerHTML=vector[i];
-                listado.appendChild(li);
-            }
+//             for(let i=0;i<vector.length;i++){
+//                 var li=document.createElement("li");
+//                 li.innerHTML=vector[i];
+//                 listado.appendChild(li);
+//             }
+//         }
+//     }
+//     ajax.open("GET","listadoAlumnos.txt");
+//     ajax.send();
+// }
+
+function cargarAlumnos(){
+ fetch("listadoAlumnos.txt")
+    .then(respuesta=>respuesta.json())
+    .then(vector=>{
+        vector.sort();
+        var listado= document.getElementById("listado");
+        listado.innerHTML="";
+        
+        for(let i=0;i<vector.length;i++){
+            var li=document.createElement("li");
+            li.innerHTML=vector[i];
+            listado.appendChild(li);
         }
-    }
-    ajax.open("GET","listadoAlumnos.txt");
-    ajax.send();
+    })
 }
 
 window.addEventListener("load",function(){
