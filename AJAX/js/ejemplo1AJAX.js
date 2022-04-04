@@ -28,8 +28,10 @@ function cargarAlumnos(){
     ajax.onreadystatechange=function(){
         if(ajax.readyState==4 && ajax.status==200){
             var vector=JSON.parse(ajax.responseText);
+            vector=vector.sort();
             var listado= document.getElementById("listado");
             listado.innerHTML="";
+
             for(let i=0;i<vector.length;i++){
                 var li=document.createElement("li");
                 li.innerHTML=vector[i];
