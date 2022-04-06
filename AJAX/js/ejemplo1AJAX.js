@@ -75,4 +75,13 @@ window.addEventListener("load",function(){
     window.setInterval(cargarAlumnos,5000);
 });
 
+// Ejercicio para jueves 7 abril 2022
+
+// 3 documentos, el primero index.html-> estructura por dentro (mirar foto)
+//en el servidor 2 paginas web, la primera guarda.php y la otra lee.php
+//cuando en index.html pulses enviar se va a guarda.php y se mete en ese fichero y lo guarda en la tabla de BD (campo mensaje)
+// la respuesta que viene es OK y sino respuesta error .
+
+//ajax asociado a boton de enviar y cuando pulses si es OK te hace todo
+//cada 2 segundos accedemos a lee.php (en lee.php encontramos <div>mensaje1</div> <div>mensaje2</div> , etc)
 
