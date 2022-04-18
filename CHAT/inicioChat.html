@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/ajax.js"></script>
-    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/ajaxCHAT.js"></script>
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
 
     <title>Document</title>
 </head>
 <body>
-    <div id="contenedor">
-
-
-        
-    </div>
-
-    <form id="form1" action="php/insertar.php" method="post">
-        <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuario"><br><br>
-        <label for="mensaje">Mensaje</label>
-        <textarea name="mensaje" id="mensaje"></textarea> <br/><br>
-        <input id="archivos" type="file" value="archivos">
-        <input id="enviar" type="submit" value="enviar">
-        
-    </form>
+   <div>
+       Usuario <input type="text" id="usuario"></br>
+       <textarea rows="3" cols="40" id="texto"></textarea>
+       <button id="enviar">Enviar</button>
+   </div>
   
+   <div id="contenedor">
+        <div class="mensaje">
+            <div class="fechahora"></div>
+            <div class="usuario"></div>
+            <div class="texto"></div>
+        </div>
+   </div>
+
 </body>
 </html>
